@@ -9,7 +9,18 @@ VibeCraft fixes that. It writes a **design rulebook** into your project that AI 
 ## How it works
 
 ```bash
-npx @design-forge/vibecraft init
+git clone https://github.com/officialnullobjectweb/vibecraft.git
+cd vibecraft && npm install
+
+# Run it in your project:
+node /path/to/vibecraft/bin/vibecraft.js init
+```
+
+Or install globally:
+
+```bash
+cd vibecraft && npm install -g .
+vibecraft init
 ```
 
 Answer 3 questions:
@@ -47,10 +58,10 @@ Each file contains:
 
 | Command | What it does |
 |---------|-------------|
-| `npx @design-forge/vibecraft init` | First-time setup — 3 questions |
-| `npx @design-forge/vibecraft scan` | Find existing components, add to registry |
-| `npx @design-forge/vibecraft watch` | Watch for new components, auto-update |
-| `npx @design-forge/vibecraft add` | Manually add a component to the registry |
+| `vibecraft init` | First-time setup — 3 questions |
+| `vibecraft scan` | Find existing components, add to registry |
+| `vibecraft watch` | Watch for new components, auto-update |
+| `vibecraft add` | Manually add a component to the registry |
 
 ## Example
 
@@ -88,7 +99,7 @@ No services running. No databases. No accounts. No telemetry. Nothing stored any
 
 ## Is it working?
 
-After running `npx @design-forge/vibecraft init`, ask your AI:
+After running `vibecraft init`, ask your AI:
 
 > "What are my project's colors and font?"
 
