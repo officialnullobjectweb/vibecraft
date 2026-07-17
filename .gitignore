@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.vibecraft
+*.log
+.DS_Store

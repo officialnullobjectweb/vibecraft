@@ -1,0 +1,43 @@
+{
+  "name": "vibecraft",
+  "version": "2.0.0",
+  "description": "Living design OS for AI agents — consistent UI across Cursor, Windsurf, Copilot, Claude Code",
+  "bin": {
+    "vibecraft": "./bin/vibecraft.js"
+  },
+  "type": "module",
+  "main": "./src/index.js",
+  "files": [
+    "bin/",
+    "src/",
+    "README.md"
+  ],
+  "keywords": [
+    "design-system",
+    "ui",
+    "ai-agent",
+    "cursor",
+    "windsurf",
+    "copilot",
+    "claude",
+    "shadcn",
+    "tailwindcss",
+    "component-registry",
+    "design-tokens"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karandhiver/vibecraft"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "chokidar": "^4.0.3",
+    "enquirer": "^2.4.1",
+    "fs-extra": "^11.3.0",
+    "glob": "^11.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
