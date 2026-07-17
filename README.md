@@ -9,17 +9,7 @@ VibeCraft fixes that. It writes a **design rulebook** into your project that AI 
 ## How it works
 
 ```bash
-git clone https://github.com/officialnullobjectweb/vibecraft.git
-cd vibecraft && npm install
-
-# Run it in your project:
-node /path/to/vibecraft/bin/vibecraft.js init
-```
-
-Or install globally:
-
-```bash
-cd vibecraft && npm install -g .
+curl -fsSL https://raw.githubusercontent.com/officialnullobjectweb/vibecraft/main/install.sh | bash
 vibecraft init
 ```
 
