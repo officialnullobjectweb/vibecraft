@@ -1,6 +1,7 @@
 export function generateStaticRules(config) {
   if (!config || !config.meta || !config.stack || !config.theme) {
-    throw new Error('Invalid config passed to generateStaticRules. Run vibecraft init again.')
+    const debug = JSON.stringify({ hasConfig: !!config, keys: config ? Object.keys(config) : [], meta: config?.meta, stack: !!config?.stack, theme: !!config?.theme, motion: config?.motion ? 'exists' : 'missing' })
+    throw new Error(`Invalid config: ${debug}`)
   }
   const { stack, theme, motion, meta } = config
   return `# ╔══════════════════════════════════════════════════════════════╗
