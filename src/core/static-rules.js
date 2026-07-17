@@ -1,5 +1,4 @@
 export function generateStaticRules({ stack, theme, motion, meta }) {
-  const { stack, theme, motion, meta } = config
   return `# ╔══════════════════════════════════════════════════════════════╗
 # ║              VIBECRAFT — LIVING DESIGN OS                    ║
 # ║  Auto-generated. Regenerate: npx vibecraft init              ║
