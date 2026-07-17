@@ -1,9 +1,10 @@
 {
-  "name": "vibecraft",
+  "name": "@design-forge/vibecraft",
   "version": "2.0.0",
   "description": "Living design OS for AI agents — consistent UI across Cursor, Windsurf, Copilot, Claude Code",
   "bin": {
-    "vibecraft": "./bin/vibecraft.js"
+    "vibecraft": "bin/vibecraft.js",
+    "vibe": "bin/vibecraft.js"
   },
   "type": "module",
   "main": "./src/index.js",
@@ -26,10 +27,11 @@
     "design-tokens"
   ],
   "license": "MIT",
-  "repository": {
+"repository": {
     "type": "git",
-    "url": "https://github.com/karandhiver/vibecraft"
+    "url": "https://github.com/officialnullobjectweb/vibecraft"
   },
+
   "dependencies": {
     "chalk": "^5.4.1",
     "chokidar": "^4.0.3",
