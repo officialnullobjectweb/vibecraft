@@ -1,8 +1,4 @@
-export function generateStaticRules(config) {
-  if (!config || !config.meta || !config.stack || !config.theme) {
-    const debug = JSON.stringify({ hasConfig: !!config, keys: config ? Object.keys(config) : [], meta: config?.meta, stack: !!config?.stack, theme: !!config?.theme, motion: config?.motion ? 'exists' : 'missing' })
-    throw new Error(`Invalid config: ${debug}`)
-  }
+export function generateStaticRules({ stack, theme, motion, meta }) {
   const { stack, theme, motion, meta } = config
   return `# ╔══════════════════════════════════════════════════════════════╗
 # ║              VIBECRAFT — LIVING DESIGN OS                    ║

@@ -12,7 +12,7 @@ export async function init() {
   console.log(chalk.bold.cyan('\n  ⚡ VibeCraft 2.0 — Project Setup\n'))
   console.log(chalk.dim('  3 questions to define your design system.\n'))
 
-  const { projectType } = await new Select({
+  const projectType = await new Select({
     name: 'projectType',
     message: 'What are you building?',
     choices: [
@@ -25,7 +25,7 @@ export async function init() {
     ],
   }).run()
 
-  const { vibe } = await new Select({
+  const vibe = await new Select({
     name: 'vibe',
     message: 'What should it feel like?',
     choices: [
@@ -38,7 +38,7 @@ export async function init() {
     ],
   }).run()
 
-  const { motion } = await new Select({
+  const motion = await new Select({
     name: 'motion',
     message: 'How much animation?',
     choices: [
