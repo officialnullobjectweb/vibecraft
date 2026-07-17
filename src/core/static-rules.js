@@ -1,4 +1,8 @@
-export function generateStaticRules({ stack, theme, motion, meta }) {
+export function generateStaticRules(config) {
+  if (!config || !config.meta || !config.stack || !config.theme) {
+    throw new Error('Invalid config passed to generateStaticRules. Run vibecraft init again.')
+  }
+  const { stack, theme, motion, meta } = config
   return `# ╔══════════════════════════════════════════════════════════════╗
 # ║              VIBECRAFT — LIVING DESIGN OS                    ║
 # ║  Auto-generated. Regenerate: npx vibecraft init              ║

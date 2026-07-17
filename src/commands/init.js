@@ -49,8 +49,15 @@ export async function init() {
     ],
   }).run()
 
-  const stack = selectStack({ projectType, vibe, motion })
-  const staticRules = generateStaticRules(stack)
+  const config = selectStack({ projectType, vibe, motion })
+
+  if (!config.meta) {
+    console.log(chalk.red('\n  Error: Could not build design config. Try reinstalling.'))
+    console.log(chalk.dim('  curl -fsSL https://raw.githubusercontent.com/officialnullobjectweb/vibecraft/main/install.sh | bash\n'))
+    process.exit(1)
+  }
+
+  const staticRules = generateStaticRules(config)
   const uxRules     = generateUXRules()
   const registry    = generateRegistry()
 
@@ -62,12 +69,12 @@ export async function init() {
   console.log(chalk.green('\n  \u2713 VibeCraft initialized\n'))
   console.log(chalk.dim('  Recommended libraries to install:\n'))
 
-  for (const install of stack.stack.installs) {
+  for (const install of config.stack.installs) {
     console.log(chalk.cyan(`    ${install}`))
   }
 
   console.log(chalk.dim('\n  Then run:'))
-  console.log(chalk.cyan('    npx vibecraft scan') + chalk.dim('  to detect existing components'))
-  console.log(chalk.cyan('    npx vibecraft watch') + chalk.dim(' to auto-update registry as you build'))
+  console.log(chalk.cyan('    vibecraft scan') + chalk.dim('  to detect existing components'))
+  console.log(chalk.cyan('    vibecraft watch') + chalk.dim(' to auto-update registry as you build'))
   console.log()
 }
